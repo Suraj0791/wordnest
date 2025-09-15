@@ -1,22 +1,28 @@
 import { getCourses, getUserProgress } from "@/db/queries";
+import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google"
+import { List } from "./_components/List";
 
-import { List } from "./list";
 
-const CoursesPage = async () => {
-  const courses = await getCourses();
-  const userProgress = await getUserProgress();
+const font = Poppins({ subsets: ["latin"], weight: ["600"] })
 
-  return (
-    <div className="h-full max-w-[912px] px-3 mx-auto">
-      <h1 className="text-2xl font-bold text-neutral-700">
-        Language Courses
-      </h1>
-      <List
+const CoursesPage = async() => {
+    const coursesPromise = getCourses();
+    const userProgressPromise = getUserProgress();
+    
+    const [courses,userProgress] = await Promise.all([coursesPromise,userProgressPromise]);
+
+    return ( 
+        <div className="h-full max-w-[912px] mx-auto px-3">
+        <h1 className={cn("text-neutral-600 tracking-wide text-2xl font-bold",font.className)}>
+        Language courses
+        </h1>
+        <List    
         courses={courses}
         activeCourseId={userProgress?.activeCourseId}
-      />
-    </div>
-  );
-};
- 
+        />
+        </div>
+    );
+}
+
 export default CoursesPage;
