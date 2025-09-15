@@ -20,3 +20,13 @@ export const quests = [
     value: 1000,
   },
 ];
+
+export const shopItems = [
+  {
+    title: "Hearts",
+    description: "Refill your hearts",
+    imageSrc: "/heart.svg",
+    price: 10, // Price in points
+  },
+  // You can add more items here in the future
+];
