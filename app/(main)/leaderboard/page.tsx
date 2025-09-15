@@ -2,11 +2,8 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
-import { UserProgress } from "@/components/user-progress";
-import { 
-  getTopTenUsers,
-  getUserProgress,
-} from "@/db/queries";
+import { UserProgress } from "@/components/UserProgress";
+import { getTopTenUsers, getUserProgress } from "@/db/queries";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
@@ -14,10 +11,7 @@ const LeaderboardPage = async () => {
   const userProgressData = getUserProgress();
   const topTenUsersData = getTopTenUsers();
 
-  const [
-    userProgress,
-    topTenUsers
-  ] = await Promise.all([
+  const [userProgress, topTenUsers] = await Promise.all([
     userProgressData,
     topTenUsersData,
   ]);
@@ -57,9 +51,7 @@ const LeaderboardPage = async () => {
               className="flex items-center w-full p-2 px-4 rounded-xl hover:bg-gray-200/50"
             >
               <p className="font-bold text-lime-700 mr-4">{index + 1}</p>
-              <Avatar
-                className="border bg-green-500 h-12 w-12 ml-3 mr-6"
-              >
+              <Avatar className="border bg-green-500 h-12 w-12 ml-3 mr-6">
                 <AvatarImage
                   src={userProgress.userImageSrc}
                   className="object-cover"
@@ -68,9 +60,7 @@ const LeaderboardPage = async () => {
               <p className="font-bold text-neutral-800 flex-1">
                 {userProgress.userName}
               </p>
-              <p className="text-muted-foreground">
-                {userProgress.points} XP
-              </p>
+              <p className="text-muted-foreground">{userProgress.points} XP</p>
             </div>
           ))}
         </div>
@@ -78,5 +68,5 @@ const LeaderboardPage = async () => {
     </div>
   );
 };
- 
+
 export default LeaderboardPage;

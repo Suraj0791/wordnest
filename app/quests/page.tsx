@@ -4,10 +4,8 @@ import Link from "next/link";
 
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
-import { UserProgress } from "@/components/user-progress";
-import { 
-  getUserProgress,
-} from "@/db/queries";
+import { UserProgress } from "@/components/UserProgress";
+import { getUserProgress } from "@/db/queries";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { quests } from "@/constants";
@@ -15,11 +13,7 @@ import { quests } from "@/constants";
 const QuestsPage = async () => {
   const userProgressData = getUserProgress();
 
-  const [
-    userProgress,
-  ] = await Promise.all([
-    userProgressData,
-  ]);
+  const [userProgress] = await Promise.all([userProgressData]);
 
   if (!userProgress || !userProgress.activeCourse) {
     redirect("/courses");
@@ -37,12 +31,7 @@ const QuestsPage = async () => {
       </StickyWrapper>
       <FeedWrapper>
         <div className="w-full flex flex-col items-center">
-          <Image
-            src="/quests.svg"
-            alt="Quests"
-            height={90}
-            width={90}
-          />
+          <Image src="/quests.svg" alt="Quests" height={90} width={90} />
           <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
             Quests
           </h1>
@@ -54,7 +43,7 @@ const QuestsPage = async () => {
               const progress = (userProgress.points / quest.value) * 100;
 
               return (
-                <div 
+                <div
                   className="flex items-center w-full p-4 gap-x-4 border-t-2"
                   key={quest.title}
                 >
@@ -71,7 +60,7 @@ const QuestsPage = async () => {
                     <Progress value={progress} className="h-3" />
                   </div>
                 </div>
-              )
+              );
             })}
           </ul>
         </div>
@@ -79,5 +68,5 @@ const QuestsPage = async () => {
     </div>
   );
 };
- 
+
 export default QuestsPage;

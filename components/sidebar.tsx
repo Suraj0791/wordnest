@@ -1,63 +1,67 @@
-import Link from "next/link";
-import Image from "next/image";
-import { 
-  ClerkLoading,
-  ClerkLoaded,
-  UserButton
-} from "@clerk/nextjs";
-import { Loader } from "lucide-react";
+// reusable component
 
 import { cn } from "@/lib/utils";
-import { SidebarItem } from "@/components/sidebar-item";
+import Image from "next/image";
+import Link from "next/link";
+import { SideBarItems } from "./sideBar-items";
+import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
+import { ChevronFirst, Loader } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-type Props = {
-  className?: string;
-};
+interface SideBarProps{
+    className?:string;
+}
 
-export const Sidebar = ({ className }: Props) => {
-  return (
-    <div className={cn(
-      "flex h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col",
-      className,
-    )}>
-      <Link href="/learn">
-        <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
-          <Image src="/mascot.svg" height={40} width={40} alt="Mascot" />
-          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+const sidebarItems = [
+    { href: '/learn', label: 'Learn', iconSrc: '/learn.svg' },
+    { href: '/leaderboard', label: 'Leaderboard', iconSrc: '/leaderboard.svg' },
+    { href: '/quests', label: 'Quests', iconSrc: '/quests.svg' },
+    { href: '/shop', label: 'Shop', iconSrc: '/shop.svg' },
+];
+
+export const SideBar = ({
+    className 
+}:SideBarProps) => {
+    return(
+        <div className={cn("flex h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col",className)}>
+            <Link href="/">
+            <div className="pt-8 pb-7 pl-4 flex items-center gap-x-3">
+            <Image
+            src="/mascot.svg"
+            alt="Mascot"
+            height={40} width={40}
+            />
+            <h1 className="uppercase text-xl font-extrabold text-green-600
+            tracking-wide cursor-pointer">
             Linguify
-          </h1>
+            </h1>
+            {/* <Button variant="ghost" size="icon" asChild>
+            <Link href="/">
+            <ChevronFirst className="h-5 w-5"/>
+            </Link>
+            </Button> */}
+            </div>
+            </Link>
+            <div className="flex flex-col flex-1 gap-y-4">
+            {sidebarItems.map((item,index)=>(
+            <SideBarItems
+            key={index}
+            label={item.label}
+            iconSrc={item.iconSrc}
+            href={item.href}
+            />
+            ))}
+            </div>
+            <div className="py-2">
+                <ClerkLoading>
+                    <Loader className = "h-5 w-5 text-muted-foreground animate-spin"/>
+                </ClerkLoading>
+                <ClerkLoaded>
+                    <UserButton
+                    afterSignOutUrl="/"
+                    />
+                </ClerkLoaded>
+            </div>
         </div>
-      </Link>
-      <div className="flex flex-col gap-y-2 flex-1">
-        <SidebarItem 
-          label="Learn" 
-          href="/learn"
-          iconSrc="/learn.svg"
-        />
-        <SidebarItem 
-          label="Leaderboard" 
-          href="/leaderboard"
-          iconSrc="/leaderboard.svg"
-        />
-        <SidebarItem 
-          label="Quests" 
-          href="/quests"
-          iconSrc="/quests.svg"
-        />
-        <SidebarItem 
-          label="Shop" 
-          href="/shop"
-          iconSrc="/shop.svg"
-        />
-      </div>
-      <div className="p-4">
-        <ClerkLoading>
-          <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
-        </ClerkLoading>
-        <ClerkLoaded>
-          <UserButton afterSignOutUrl="/" />
-        </ClerkLoaded>
-      </div>
-    </div>
-  );
-};
+    )
+}
