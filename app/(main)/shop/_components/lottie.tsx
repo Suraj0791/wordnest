@@ -1,5 +1,5 @@
 "use client";
-import animationData from "@/public/shop.json";
+import animationData from "../../../../public/shop.json";
 import Lottie from "lottie-react";
 const ShopJson = () => {
     return ( 

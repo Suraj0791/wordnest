@@ -1,5 +1,5 @@
 "use client";
-import animationData from "@/public/duo.json";
+import animationData from "../../public/duo.json";
 import Lottie from "lottie-react";
 const DuoLottie = () => {
     return ( 

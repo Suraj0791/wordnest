@@ -1,5 +1,5 @@
 "use client";
-import animationData from "@/public/duolingo.json";
+import animationData from "../../public/duolingo.json";
 import Lottie from "lottie-react";
 const LottieJson = () => {
     return ( 

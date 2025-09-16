@@ -1,5 +1,5 @@
 "use client";
-import animationData from "@/public/connect.json";
+import animationData from "../../public/connect.json";
 import Lottie from "lottie-react";
 const ConnectJson = () => {
     return ( 
