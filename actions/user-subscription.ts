@@ -1,6 +1,7 @@
 "use server";
 
 import { getUserSubscriptions } from '@/db/queries';
+// Update this import to match the actual export from '@/lib/stripe'
 import { stripe } from '@/lib/stripe';
 import { absoluteUrl } from '@/lib/utils';
 import { auth,  currentUser } from '@clerk/nextjs';
