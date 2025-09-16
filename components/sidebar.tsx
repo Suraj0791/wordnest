@@ -33,7 +33,7 @@ export const SideBar = ({
             />
             <h1 className="uppercase text-xl font-extrabold text-green-600
             tracking-wide cursor-pointer">
-            WordNest
+            Linguify
             </h1>
             </div>
             </Link>
