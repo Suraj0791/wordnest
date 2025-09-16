@@ -17,6 +17,7 @@ const main = async() => {
     await db.delete(schema.challenges);
     await db.delete(schema.challengesOptions);
     await db.delete(schema.challengesProgress);
+    await db.delete(schema.userSubscription);
     await db.insert(schema.courses).values([
         {
             id:1,
@@ -88,21 +89,21 @@ const main = async() => {
             id:1,
             lessonId:1, //Noun
             type:"SELECT",
-            order:1,
+            order:"1",
             question:'Which one of these is "the man"?'
         },  
         {
             id:2,
             lessonId:1,
             type:"ASSIST",
-            order:2,
+            order:"2",
             question:'"the man"',
         },  
         {
             id:3,
             lessonId:1,
             type:"SELECT",
-            order:3,
+            order:"3",
             question:'Which one of these is "the robot"',
         },  
     ]);
@@ -181,28 +182,27 @@ const main = async() => {
 
     await db.insert(schema.challenges).values([
         {
-            id:4,
-            lessonId:2, //Noun
-            type:"SELECT",
-            order:1,
-            question:'Which one of these is "the man"?'
+            id: 1,
+            lessonId: 1, //Noun
+            type: "SELECT",
+            order: "1",
+            question: 'Which one of these is "the man"?'
         },  
         {
-            id:5,
-            lessonId:2,
-            type:"ASSIST",
-            order:2,
-            question:'"the man"',
+            id: 2,
+            lessonId: 1,
+            type: "ASSIST",
+            order: "2",
+            question: '"the man"',
         },  
         {
-            id:6,
-            lessonId:2,
-            type:"SELECT",
-            order:3,
-            question:'Which one of these is "the robot"',
+            id: 3,
+            lessonId: 1,
+            type: "SELECT",
+            order: "3",
+            question: 'Which one of these is "the robot"',
         },  
     ]);
-    
     
 
     console.log("Seeding finished");    
