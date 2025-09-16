@@ -1,46 +1,53 @@
-import Image from "next/image";
-import { redirect } from "next/navigation";
-
-import { FeedWrapper } from "@/components/feed-wrapper";
-import { StickyWrapper } from "@/components/sticky-wrapper";
+import FeedWrapper from "@/components/FeedWrapper";
+import StickyWrapper from "@/components/sticky-wrapper";
 import { UserProgress } from "@/components/UserProgress";
 import { getUserProgress } from "@/db/queries";
+import Image from "next/image";
+import { redirect } from "next/navigation";
+import ItemsPage from "./_components/items";
 
-import { Items } from "./items";
+const ShopPage = async() => {
+    const userProgressData = getUserProgress();
+    const [userProgress] = await Promise.all([userProgressData])
 
-const ShopPage = async () => {
-  const userProgressData = getUserProgress();
+    if(!userProgress || !userProgress.activeCourse){
+        redirect("/courses");
+    }
 
-  const [userProgress] = await Promise.all([userProgressData]);
-
-  if (!userProgress || !userProgress.activeCourse) {
-    redirect("/courses");
-  }
-
-  return (
-    <div className="flex flex-row-reverse gap-[48px] px-6">
-      <StickyWrapper>
-        <UserProgress
-          activeCourse={userProgress.activeCourse}
-          hearts={userProgress.hearts}
-          points={userProgress.points}
-          hasActiveSubscription={false} // TODO: Add subscription logic
-        />
-      </StickyWrapper>
-      <FeedWrapper>
-        <div className="w-full flex flex-col items-center">
-          <Image src="/shop.svg" alt="Shop" height={90} width={90} />
-          <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
-            Shop
-          </h1>
-          <p className="text-muted-foreground text-center text-lg mb-6">
-            Spend your points on cool stuff.
-          </p>
-          <Items hearts={userProgress.hearts} points={userProgress.points} />
+    return ( 
+        <div className="flex flex-row-reverse gap-[42px] px-6">
+            <StickyWrapper>
+            <UserProgress 
+            activeCourse={userProgress.activeCourse}
+            hearts={userProgress.hearts}
+            points={userProgress.points}
+            hasActiveSubscription={false}
+            />
+            </StickyWrapper>
+            <FeedWrapper
+            >
+                <div className="w-full flex flex-col items-center">
+                <Image
+                src="/shop.svg"
+                alt="Shop"
+                height={100}
+                width={100}
+                />
+                <h1 className="text-center font-bold text-neutral-800 dark:text-slate-200 text-2xl my-6">
+                    Shop
+                </h1>
+                <p className="text-muted-foreground text-center text-lg mb-6">
+                    Spend points on your cool stuff with fun.
+                </p>
+                <ItemsPage
+                hearts={userProgress.hearts}
+                points={userProgress.points}
+                hasActiveSubscription={false} //Todo: add subscription
+                />
+                </div>
+            </FeedWrapper>
         </div>
-      </FeedWrapper>
-    </div>
-  );
-};
-
+     );
+}
+ 
 export default ShopPage;
