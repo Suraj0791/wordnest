@@ -65,16 +65,16 @@ const main = async () => {
       .returning();
       
     await db.insert(schema.challengesOptions).values([
-      { challengeId: challengesNouns[0].id, correct: true, text: "el hombre", image_src: "/man.svg", audio_src: "/es_man.mp3" },
-      { challengeId: challengesNouns[0].id, correct: false, text: "la mujer", image_src: "/woman.svg", audio_src: "/es_woman.mp3" },
-      { challengeId: challengesNouns[0].id, correct: false, text: "el chico", image_src: "/boy.svg", audio_src: "/es_boy.mp3" },
+      { challengeId: challengesNouns[0].id, correct: true, text: "el hombre", imageSrc: "/man.svg", audioSrc: "/es_man.mp3" },
+      { challengeId: challengesNouns[0].id, correct: false, text: "la mujer", imageSrc: "/woman.svg", audioSrc: "/es_woman.mp3" },
+      { challengeId: challengesNouns[0].id, correct: false, text: "el chico", imageSrc: "/boy.svg", audioSrc: "/es_boy.mp3" },
       
-      { challengeId: challengesNouns[1].id, correct: true, text: "el hombre", image_src: "/unselected.svg", audio_src: "/es_man.mp3" },
-      { challengeId: challengesNouns[1].id, correct: false, text: "la mujer", image_src: "/unselected.svg", audio_src: "/es_woman.mp3" },
+      { challengeId: challengesNouns[1].id, correct: true, text: "el hombre", imageSrc: "/unselected.svg", audioSrc: "/es_man.mp3" },
+      { challengeId: challengesNouns[1].id, correct: false, text: "la mujer", imageSrc: "/unselected.svg", audioSrc: "/es_woman.mp3" },
 
-      { challengeId: challengesNouns[2].id, correct: false, text: "el hombre", image_src: "/man.svg", audio_src: "/es_man.mp3" },
-      { challengeId: challengesNouns[2].id, correct: true, text: "la mujer", image_src: "/woman.svg", audio_src: "/es_woman.mp3" },
-      { challengeId: challengesNouns[2].id, correct: false, text: "el chico", image_src: "/boy.svg", audio_src: "/es_boy.mp3" },
+      { challengeId: challengesNouns[2].id, correct: false, text: "el hombre", imageSrc: "/man.svg", audioSrc: "/es_man.mp3" },
+      { challengeId: challengesNouns[2].id, correct: true, text: "la mujer", imageSrc: "/woman.svg", audioSrc: "/es_woman.mp3" },
+      { challengeId: challengesNouns[2].id, correct: false, text: "el chico", imageSrc: "/boy.svg", audioSrc: "/es_boy.mp3" },
     ]);
 
     // --- Challenges and Options for Lesson 2 (Verbs) ---
@@ -87,11 +87,11 @@ const main = async () => {
       .returning();
 
     await db.insert(schema.challengesOptions).values([
-      { challengeId: challengesVerbs[0].id, correct: true, text: "el robot", image_src: "/robot.svg", audio_src: "/es_robot.mp3" },
-      { challengeId: challengesVerbs[0].id, correct: false, text: "el zombi", image_src: "/zombie.svg", audio_src: "/es_zombie.mp3" },
+      { challengeId: challengesVerbs[0].id, correct: true, text: "el robot", imageSrc: "/robot.svg", audioSrc: "/es_robot.mp3" },
+      { challengeId: challengesVerbs[0].id, correct: false, text: "el zombi", imageSrc: "/zombie.svg", audioSrc: "/es_zombie.mp3" },
       
-      { challengeId: challengesVerbs[1].id, correct: false, text: "la niña", image_src: "/girl.svg", audio_src: "/es_girl.mp3" },
-      { challengeId: challengesVerbs[1].id, correct: true, text: "el chico", image_src: "/boy.svg", audio_src: "/es_boy.mp3" },
+      { challengeId: challengesVerbs[1].id, correct: false, text: "la niña", imageSrc: "/girl.svg", audioSrc: "/es_girl.mp3" },
+      { challengeId: challengesVerbs[1].id, correct: true, text: "el chico", imageSrc: "/boy.svg", audioSrc: "/es_boy.mp3" },
     ]);
 
     console.log("Database seeded successfully");
