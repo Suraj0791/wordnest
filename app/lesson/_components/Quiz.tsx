@@ -15,6 +15,7 @@ import { reduceHearts } from "@/actions/user-progress";
 import { useAudio,useMount } from "react-use";
 import Image from "next/image";
 import ResultCard from "./result-card";
+
 import { useRouter } from "next/navigation";
 import { useHeartsModal } from "@/store/use-hearts";
 import { usePractiseModal } from "@/store/use-practice-modal";
