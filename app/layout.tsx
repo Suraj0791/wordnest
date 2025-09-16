@@ -6,11 +6,13 @@ import { Toaster, toast } from 'sonner'
 import { Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import ExitModal from "@/components/modals/useExitModal";
+import HeartsModal from "@/components/modals/useHeartsModal";
+import PractiseModal from "@/components/modals/usePractiseModal";
 
 const font = Poppins({ subsets: ["latin"], weight: ["500"] })
 
 export const metadata: Metadata = {
-  title: "Linguify",
+  title: "WordNest",
   description: "AI based Language Learning App",
   icons:{
   icon: './public/mascot.svg'
@@ -30,17 +32,17 @@ export default function RootLayout({
     >
     <html lang="en" suppressHydrationWarning>
       <head>
-      <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="66f6210b-4429-4250-8fdd-6e63ebd647f8" async></script>
+      <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="8efceb49-2776-47f5-bb58-33fcc018acc9" async></script>
       </head>
       <body className={font.className}>
       <ThemeProvider
             attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
+            defaultTheme="system"
           >
       <Toaster richColors position="bottom-right" />
         <ExitModal/>
+        <HeartsModal/>
+        <PractiseModal/>
         {children}
         </ThemeProvider>
       </body>
