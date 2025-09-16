@@ -1,9 +1,16 @@
 import { getLesson, getUserProgress, getUserSubscriptions } from "@/db/queries";
 import { redirect } from "next/navigation";
-import Quiz from "./_components/Quiz";
+import Quiz from "../_components/Quiz";
 
-const LessonPage = async() => {
-    const lessonData =   getLesson();
+type Props = {
+    params:{
+        lessonId:number
+    }
+}
+const LessonIdPage = async({
+    params,
+}:Props) => {
+    const lessonData =  getLesson(params.lessonId);
     const userProgressData =  getUserProgress();
     const userSubscriptionData = getUserSubscriptions();
 
@@ -30,4 +37,4 @@ const LessonPage = async() => {
     );
 }
 
-export default LessonPage;
+export default LessonIdPage;
