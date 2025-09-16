@@ -1,20 +1,23 @@
-import { Header } from "./header";
-import { Footer } from "./footer";
+import ConnectJson from "./connect";
+import FooterPage from "./footer";
+import HeaderPage from "./header";
 
-type Props = {
+interface MarketingLayoutProps {
   children: React.ReactNode;
-};
+}
 
-const MarketingLayout = ({ children }: Props) => {
+const MarketingLayout = ({ children }: MarketingLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <HeaderPage />
       <main className="flex-1 flex flex-col items-center justify-center">
         {children}
       </main>
-      <Footer />
+      {/* Can extend the number of sections in the future */}
+      {/* <ConnectJson/> */}
+      <FooterPage />
     </div>
   );
 };
- 
+
 export default MarketingLayout;
