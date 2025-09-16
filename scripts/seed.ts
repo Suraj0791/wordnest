@@ -379,538 +379,538 @@ const main = async () => {
         ]);
 
         // Challenge options for Lesson 2
-await db.insert(schema.challengesOptions).values([
-    // Challenge 4: Which one is "the boy"?
-    {
-        challengeId: 4,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 4,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 4,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 4: Which one is "the boy"?
+            {
+                challengeId: 4,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 4,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 4,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 5: "the girl" (ASSIST)
-    {
-        challengeId: 5,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 5,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 5,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 5: "the girl" (ASSIST)
+            {
+                challengeId: 5,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 5,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 5,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 6: Which one is "the woman"?
-    {
-        challengeId: 6,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 6,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 6,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: true,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 6: Which one is "the woman"?
+            {
+                challengeId: 6,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 6,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 6,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: true,
+            },
+        ]);
 
-// Challenge options for Lesson 3
-await db.insert(schema.challengesOptions).values([
-    // Challenge 7: Which one is "the zombie"?
-    {
-        challengeId: 7,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 7,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 7,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Lesson 3
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 7: Which one is "the zombie"?
+            {
+                challengeId: 7,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 7,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 7,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 8: "the robot" (ASSIST)
-    {
-        challengeId: 8,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 8,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 8,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 8: "the robot" (ASSIST)
+            {
+                challengeId: 8,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 8,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 8,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 9: Which one is "the man"?
-    {
-        challengeId: 9,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 9,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 9,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: true,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 9: Which one is "the man"?
+            {
+                challengeId: 9,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 9,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 9,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: true,
+            },
+        ]);
 
-// Challenge options for Lesson 4 (Mixed Practice)
-await db.insert(schema.challengesOptions).values([
-    // Challenge 10: Which one is "the girl"?
-    {
-        challengeId: 10,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 10,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 10,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Lesson 4 (Mixed Practice)
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 10: Which one is "the girl"?
+            {
+                challengeId: 10,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 10,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 10,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 11: "the zombie" (ASSIST)
-    {
-        challengeId: 11,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 11,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 11,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: true,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 11: "the zombie" (ASSIST)
+            {
+                challengeId: 11,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 11,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 11,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: true,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 12: Which one is "the woman"?
-    {
-        challengeId: 12,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 12,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 12,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 12: Which one is "the woman"?
+            {
+                challengeId: 12,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 12,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 12,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-// Challenge options for Lesson 5 (Unit 1 Review)
-await db.insert(schema.challengesOptions).values([
-    // Challenge 13: Which one is "the robot"?
-    {
-        challengeId: 13,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 13,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 13,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Lesson 5 (Unit 1 Review)
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 13: Which one is "the robot"?
+            {
+                challengeId: 13,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 13,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 13,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 14: "the boy" (ASSIST)
-    {
-        challengeId: 14,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 14,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 14,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 14: "the boy" (ASSIST)
+            {
+                challengeId: 14,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 14,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 14,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 15: Which one is "the man"?
-    {
-        challengeId: 15,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 15,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 15,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 15: Which one is "the man"?
+            {
+                challengeId: 15,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 15,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 15,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-// Challenge options for Unit 2 - Lesson 6
-await db.insert(schema.challengesOptions).values([
-    // Challenge 16: Which one is "the man"?
-    {
-        challengeId: 16,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 16,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 16,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Unit 2 - Lesson 6
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 16: Which one is "the man"?
+            {
+                challengeId: 16,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 16,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 16,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 17: "the woman" (ASSIST)
-    {
-        challengeId: 17,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 17,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 17,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 17: "the woman" (ASSIST)
+            {
+                challengeId: 17,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 17,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 17,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 18: Which one is "the girl"?
-    {
-        challengeId: 18,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 18,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 18,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 18: Which one is "the girl"?
+            {
+                challengeId: 18,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 18,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 18,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: false,
+            },
+        ]);
 
-// Challenge options for Unit 2 - Lesson 7
-await db.insert(schema.challengesOptions).values([
-    // Challenge 19: Which one is "the boy"?
-    {
-        challengeId: 19,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 19,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 19,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Unit 2 - Lesson 7
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 19: Which one is "the boy"?
+            {
+                challengeId: 19,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 19,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 19,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 20: "the zombie" (ASSIST)
-    {
-        challengeId: 20,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 20,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 20,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: true,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 20: "the zombie" (ASSIST)
+            {
+                challengeId: 20,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 20,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 20,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: true,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 21: Which one is "the robot"?
-    {
-        challengeId: 21,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 21,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 21,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 21: Which one is "the robot"?
+            {
+                challengeId: 21,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 21,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 21,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-// Challenge options for Unit 2 - Lesson 8 (Final Review)
-await db.insert(schema.challengesOptions).values([
-    // Challenge 22: Which one is "the woman"?
-    {
-        challengeId: 22,
-        imageSrc: "/woman.svg",
-        text: "la mujer",
-        audioSrc: "/es_woman.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 22,
-        imageSrc: "/girl.svg",
-        text: "la niña",
-        audioSrc: "/es_girl.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 22,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-]);
+        // Challenge options for Unit 2 - Lesson 8 (Final Review)
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 22: Which one is "the woman"?
+            {
+                challengeId: 22,
+                imageSrc: "/woman.svg",
+                text: "la mujer",
+                audioSrc: "/es_woman.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 22,
+                imageSrc: "/girl.svg",
+                text: "la niña",
+                audioSrc: "/es_girl.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 22,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 23: "the man" (ASSIST)
-    {
-        challengeId: 23,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 23,
-        imageSrc: "/boy.svg",
-        text: "el niño",
-        audioSrc: "/es_boy.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 23,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 23: "the man" (ASSIST)
+            {
+                challengeId: 23,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 23,
+                imageSrc: "/boy.svg",
+                text: "el niño",
+                audioSrc: "/es_boy.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 23,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: false,
+            },
+        ]);
 
-await db.insert(schema.challengesOptions).values([
-    // Challenge 24: Which one is "the zombie"?
-    {
-        challengeId: 24,
-        imageSrc: "/zombie.svg",
-        text: "el zombi",
-        audioSrc: "/es_zombie.mp3",
-        correct: true,
-    },
-    {
-        challengeId: 24,
-        imageSrc: "/robot.svg",
-        text: "el robot",
-        audioSrc: "/es_robot.mp3",
-        correct: false,
-    },
-    {
-        challengeId: 24,
-        imageSrc: "/man.svg",
-        text: "el hombre",
-        audioSrc: "/es_man.mp3",
-        correct: false,
-    },
-]);
+        await db.insert(schema.challengesOptions).values([
+            // Challenge 24: Which one is "the zombie"?
+            {
+                challengeId: 24,
+                imageSrc: "/zombie.svg",
+                text: "el zombi",
+                audioSrc: "/es_zombie.mp3",
+                correct: true,
+            },
+            {
+                challengeId: 24,
+                imageSrc: "/robot.svg",
+                text: "el robot",
+                audioSrc: "/es_robot.mp3",
+                correct: false,
+            },
+            {
+                challengeId: 24,
+                imageSrc: "/man.svg",
+                text: "el hombre",
+                audioSrc: "/es_man.mp3",
+                correct: false,
+            },
+        ]);
 
-console.log("Seeding finished");    
+        console.log("Seeding finished");
     } catch (err) {
         console.error(err);
         throw new Error("Failed to seed database")

@@ -30,7 +30,7 @@ export default function Home() {
     dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-tr from-slate-500 to-neutral-300/90
     ">
       <LottieJson/>
-    Master and refine in learning new languages through Linguify.
+    Master and refine in learning new languages through WordNest.
     </h1>
     <div className="flex flex-col items-center justify-center 
     gap-y-3 max-w-[330px] w-full">

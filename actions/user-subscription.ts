@@ -38,7 +38,7 @@ export const createStripeUrl = async() => {
                 price_data:{
                     currency:"USD",
                     product_data:{
-                        name:"Linguify Pro",
+                        name:"WordNest Pro",
                         description:"Get Unlimited Hearts"
                     },
                     unit_amount:2000, //$20
