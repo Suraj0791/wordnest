@@ -1,5 +1,5 @@
 {
-    "buildCommand": "npm install --legacy-peer-deps && npm run build",
+    "buildCommand": "npm install --legacy-peer-deps && bash ./create-symlinks.sh && npm run vercel-build",
     "framework": "nextjs",
     "functions": {
         "app/api/**/*.ts": {
