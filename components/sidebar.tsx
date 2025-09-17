@@ -1,59 +1,56 @@
-// reusable component
-
 import { cn } from "@/lib/utils";
+
 import Image from "next/image";
 import Link from "next/link";
-import { SidebarItems } from "./sidebar-items";
+import React from "react";
+import { SideBarItem } from "./sidebar-item";
 import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
-import { ChevronFirst, Loader } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Loader } from "lucide-react";
 
-interface SideBarProps {
+type Props = {
   className?: string;
-}
+};
 
-const sidebarItems = [
-  { href: "/learn", label: "Learn", iconSrc: "/learn.svg" },
-  { href: "/leaderboard", label: "Leaderboard", iconSrc: "/leaderboard.svg" },
-  { href: "/quests", label: "Quests", iconSrc: "/quests.svg" },
-  { href: "/shop", label: "Shop", iconSrc: "/shop.svg" },
+const SideBarData = [
+  { label: "Learn", href: "/learn", iconSrc: "/learn.svg" },
+  { label: "Leaderbaord", href: "/leaderboard", iconSrc: "/leaderboard.svg" },
+  { label: "Quests", href: "/quests", iconSrc: "/quests.svg" },
+  { label: "shop", href: "/shop", iconSrc: "/shop.svg" },
 ];
 
-export const Sidebar = ({ className }: SideBarProps) => {
+export const SideBar = ({ className }: Props) => {
   return (
     <div
       className={cn(
-        "flex h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col",
-        className
+        `left-0  top-0 flex h-full
+         flex-col border-r-2  px-4 lg:fixed lg:w-[256px]`,
+        className,
       )}
     >
-      <Link href="/">
-        <div className="pt-8 pb-7 pl-4 flex items-center gap-x-3">
+      <Link href="/learn">
+        <div className="flex items-center gap-x-3 pb-7 pl-4 pt-8">
           <Image src="/mascot.svg" alt="Mascot" height={40} width={40} />
-          <h1
-            className="uppercase text-xl font-extrabold text-green-600
-            tracking-wide cursor-pointer"
-          >
-            Linguify
+          <h1 className="text-2xl font-extrabold tracking-wide text-green-600">
+            DuoLingo
           </h1>
         </div>
       </Link>
-      <div className="flex flex-col flex-1 gap-y-4">
-        {sidebarItems.map((item, index) => (
-          <SidebarItems
-            key={index}
+      <div className="flex flex-1 flex-col gap-y-2">
+        {SideBarData.map((item) => (
+          <SideBarItem
+            key={item.href}
             label={item.label}
-            iconSrc={item.iconSrc}
             href={item.href}
+            iconSrc={item.iconSrc}
           />
         ))}
       </div>
-      <div className="py-2">
+      <div className="p-4">
         <ClerkLoading>
-          <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+          <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
         </ClerkLoading>
         <ClerkLoaded>
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
         </ClerkLoaded>
       </div>
     </div>
